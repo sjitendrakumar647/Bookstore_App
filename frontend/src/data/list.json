@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "The Great Gatsby",
+    "title": "A Classic Novel",
+    "price": 0.00,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/magic-fairytale-book-concept_23-2150171884.jpg?t=st=1746904157~exp=1746907757~hmac=77929ac610766a5d5d6fee5192561fa1f3cc8a237eae1b81b9547e78906de9ea&w=1380"
+  },
+  {
+    "id": 2,
+    "name": "To Kill a Mockingbird",
+    "title": "A Timeless Tale",
+    "price": 12.99,
+    "category": "Fiction",
+    "image": "https://img.freepik.com/premium-photo/close-up-pocket-watch-book-against-lit-candle-darkroom_1048944-27224935.jpg?w=1380"
+  },
+  {
+    "id": 3,
+    "name": "1984",
+    "title": "A Dystopian Masterpiece",
+    "price": 0.00,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/space-travel-collage-design_23-2150163772.jpg?t=st=1746904895~exp=1746908495~hmac=22222ba3f1b447badff92ef7e89ee30a605d7a6f62c7cad516c990d899e7b724&w=1380"
+  },
+  {
+    "id": 4,
+    "name": "The Catcher in the Rye",
+    "title": "A Coming-of-Age Story",
+    "price": 11.99,
+    "category": "Fiction",
+    "image": "https://img.freepik.com/premium-photo/boy-is-sitting-reading-book-reading-room-with-sunlight-shining-through-window_423236-18389.jpg?w=1380"
+  },
+  {
+    "id": 5,
+    "name": "Pride and Prejudice",
+    "title": "A Romantic Classic",
+    "price": 0.00,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/beautiful-woman-long-red-dress-walks-around-city-with-her-husband_1157-13379.jpg?t=st=1746904409~exp=1746908009~hmac=b02f58818e7b04c865e462ff558e7efccff7ae8be0261c738ceb8a4fde405435&w=1380"
+  },
+  {
+    "id": 6,
+    "name": "The Hobbit",
+    "title": "A Fantasy Adventure",
+    "price": 13.99,
+    "category": "Fantasy",
+    "image": "https://img.freepik.com/premium-photo/best-color-best-pic-generative-ai_924589-1778.jpg?w=1380"
+  },
+  {
+    "id": 7,
+    "name": "Harry Potter and the Sorcerer's Stone",
+    "title": "A Magical Journey",
+    "price": 0.00,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/mythical-video-game-inspired-landscape-with-human_23-2150974381.jpg?t=st=1746904543~exp=1746908143~hmac=9f05c889288c57fd349ec4b95e220102f05ba4361147f0271b957131651f01aa&w=1380"
+  },
+  {
+    "id": 8,
+    "name": "The Alchemist",
+    "title": "A Philosophical Tale",
+    "price": 10.49,
+    "category": "Philosophy",
+    "image": "https://img.freepik.com/free-photo/fairytale-scene-coming-out-book_23-2151778541.jpg?t=st=1746883467~exp=1746887067~hmac=fc6900f278c7d83b35196d8dfe07647e020336578ef51b4a8a6f44855235f056&w=1380"
+  },
+  {
+    "id": 9,
+    "name": "Sapiens: A Brief History of Humankind",
+    "title": "A Historical Perspective",
+    "price": 18.99,
+    "category": "History",
+    "image": "https://img.freepik.com/free-photo/ancient-ruins-background-hint-history_91128-4383.jpg?t=st=1746883850~exp=1746887450~hmac=cfbeef9f8bb092760920d2cbd9858bee43f8a6ff697e1d348fd8d8d69c750d81&w=1800"
+  },
+  {
+    "id": 10,
+    "name": "The Art of War",
+    "title": "A Strategic Guide",
+    "price": 0.00,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/front-view-soldiers-fighting-war_23-2151001957.jpg?t=st=1746904712~exp=1746908312~hmac=173860d09494a975116049554d1daf7f76ccc5142a53f2150305315a7ad5b7df&w=1380"
+  }
+]
