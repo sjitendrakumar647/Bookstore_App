@@ -1,11 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Bookcard from '../book/Bookcard';
-import list from '../data/list.json';
+// import list from '../data/list.json';
+import axios from 'axios'; 
+import { use } from 'react';
 function Book() {
   // console.log(list);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
+
+  const [books, setBooks] = useState([]);
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const response = await axios.get('http://localhost:4001/book');
+        console.log(response.data);
+        setBooks(response.data);
+      } catch (error) {
+        console.error('Error fetching books:', error);
+      }
+    };
+
+    fetchBooks();
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +38,7 @@ function Book() {
 
   return (
     <div className="">
-      {!isLoggedIn ? (
+      {isLoggedIn ? (
         <>
         <div className="flex flex-col items-center justify-center min-h-screen">
           <div className='border-2 flex flex-col items-center justify-center shadow-lg rounded-2xl p-8 w-auto transition-transform duration-300'>
@@ -99,7 +116,7 @@ function Book() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-15">
           {
-            list.map((item)=>(      
+            books.map((item)=>(      
               <Bookcard item={item} key={item.id}/>              
             ))
           }          
