@@ -1,9 +1,26 @@
 import React from 'react'
-import list from '../data/list.json'
-import Bookcard from '../book/Bookcard'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
 function Freebook() {
-  const filterData = list.filter((item) => item.category === 'Free');
-  // const filterData = list.filter((item) => item.category != 'Free');
+
+  const [books, setBooks] = useState([]);
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const response = await axios.get('http://localhost:4001/book');
+        console.log(response.data);
+        setBooks(response.data);
+      } catch (error) {
+        console.error('Error fetching books:', error);
+      }
+    };
+
+    fetchBooks();
+  }, []);
+
+  const filterData = books.filter((item) => item.category === 'Free');
+  // const filterData = books.filter((item) => item.category != 'Free');
 
   console.log(filterData);
   const data = filterData.map((item) => {

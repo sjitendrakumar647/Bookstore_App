@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Category from './Category';
 import { Link } from 'react-router-dom';
-
+import Logout from './Logout';
+import { useAuth } from '../context/AuthProvider';
 const Navbar = () => {
+
   const [sticky, setSticky] = useState(false);
   // Handle sticky navbar on scroll
   useEffect(() => {
@@ -19,6 +21,8 @@ const Navbar = () => {
     };
   }, []);
 
+    const [authUser, setAuthUser] = useAuth()
+    console.log(authUser);
   return (
     <div
       className={`navbar bg-base-100 shadow-sm fixed top-0 left-0 right-0 z-10 ${
@@ -27,8 +31,12 @@ const Navbar = () => {
           : 'bg-base-100'
       }`}
     >
+      
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">Book Store</a>
+        <Link to="/">
+          <span className="btn btn-ghost text-xl">Book Store</span>
+        </Link>
+        
       </div>
       <ul className="hidden md:flex gap-5">
         <li>
@@ -82,17 +90,23 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <button
+      {authUser ? (<Logout/>):(
+        <>
+        <button
         className="btn m-2 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 hover:to-blue-600 hover:from-blue-700 transition-all duration-300 ease-in-out hover:scale-105"
-        onClick={() => document.getElementById('my_modal_3').showModal()}
+        onClick={() => document.getElementById('my_modal_1').showModal()}
       >
         Login
       </button>
-      <Link to="/register">
-        <div className="btn bg-white text-sm font-semibold text-gray-900 shadow-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:scale-105 transition-all duration-300 ease-in-out">
-          register
-        </div>
-      </Link>
+      <button
+        className="btn bg-white text-sm font-semibold text-gray-900 shadow-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:scale-105 transition-all duration-300 ease-in-out"
+        onClick={() => document.getElementById('my_modal_2')?.showModal()}
+      >
+        Register
+      </button>
+        
+        </>
+      )}
     </div>
   );
 };

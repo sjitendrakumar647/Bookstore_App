@@ -27,11 +27,11 @@ export default function Banner() {
             Discover tools that help you stay productive and organized. Start your journey today and achieve more.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-            <Link to="/login">
-              <div className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-gray-900 shadow-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+            <button onClick={() => document.getElementById('my_modal_2')?.showModal()}>
+              <div className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-gray-900 shadow-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white cursor-pointer">
                 Get Started
               </div>
-            </Link>
+            </button>
             <a href="#" className="text-sm font-semibold text-white hover:underline">
               Learn More <span aria-hidden="true">→</span>
             </a>
